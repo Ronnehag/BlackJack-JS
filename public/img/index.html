@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlackJack Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>BlackJack</h1>
+    </header>
+
+    <!-- Wrapper -->
+    <div class="container">
+        <!-- House cards -->
+        <section id="houseCards">
+            <div class="card-back hidden"></div>
+            <div class="card hidden"></div>
+            <div class="card hidden"></div>
+            <div class="card hidden"></div>
+            <div class="card hidden"></div>
+            <h4 class="padding">House cards</h4>
+        </section>
+
+        <!-- Players cards -->
+        <section id="playerCards">
+            <div class="card-back hidden"></div>
+            <div class="card hidden"></div>
+            <div class="card hidden"></div>
+            <div class="card hidden"></div>
+            <div class="card hidden"></div>
+            <h4 class="padding">Your cards</h4>
+        </section>
+    </div> <!-- End wrapper -->
+
+    <!-- Game message section  -->
+    <section class="container-sm">
+        <div>
+            <h2 id="msg">Current value: <span id="score"></span></h2>
+        </div>
+    </section>
+
+    <!-- User button interface -->
+    <section class="container-sm">
+        <div id="userInterface" class="interface">
+            <button type="button" id="deal" class="btn btn-primary">New Game</button>
+            <button type="button" id="hit" class="btn btn-info">Hit</button>
+            <button type="button" id="stay" class="btn btn-danger">Stay</button>
+        </div>
+    </section>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous" defer></script>
+
+    <!-- Game JavaScript -->
+    <script src="js/deck.js" defer></script>
+    <script src="js/interface.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>

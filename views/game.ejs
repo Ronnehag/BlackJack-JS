@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="navbar-brand">Welcome | <span id="userName"><%=user.username%></span></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Log Out</a>
+            </div>
+            <div class="btn-group dropdown ml-auto">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Deposit
+                </button>
+                <div class="dropdown-menu">
+                    <form class="form-inline px-4 py-3" action="/game" method="put" id="depositMoney">
+                        <label for="money">Money</label>
+                        <input class="form-control mr-sm-2" type="money" name="deposit" placeholder="deposit money...">
+                        <button class="btn btn-primary mt-sm" type="submit">Confirm</button>
+                    </form>
+                </div>
+            </div>
+            <span class="ml-sm-2">
+            <ul class="inline-list">
+                <li class="m-right gray">BALANCE:</li>
+                <li id="money"><%=user.money%>$</li>
+            </ul>
+            </span>
+        </div>
+    </nav>
+
+    <section class="container" id="gameSection">
+        <header class="text-center header">
+            <h1>Black Jack</h1>
+        </header>
+        <div class="row">
+            <section class="col-sm-1 text-center mx-auto">
+                <h4><span id="houseScore"></span></h4>
+            </section>
+        </div>
+        <div class="row">
+            <section id="houseCards" class="col-sm-6 mx-auto text-center">
+                <!-- Computer cards will be added here through JavaScript -->
+            </section>
+        </div>
+
+        <!-- Game message section -->
+        <div class="row">
+            <section class="col-sm-12 mx-auto text-center">
+                <h2 id="gameMsg">
+                    Place your bet
+                    <!-- Game message will be added here through JavaScript -->
+                </h2>
+            </section>
+        </div>
+
+        <div class="row">
+            <section id="playerCards" class="col-sm-6 mx-auto text-center">
+                <!-- Player cards will be added here through JavaScript -->
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="col-sm-1 text-center mx-auto">
+                <h4><span id="playerScore"></span></h4>
+            </section>
+        </div>
+    </section>
+
+    <!-- Game interface section -->
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <ul id="interface">
+                    <li><button class="btn btn-primary" id="deal">Deal</button></li>
+                    <li><button class="btn btn-warning" id="hit">Hit</button></li>
+                    <li><button class="btn btn-danger" id="stay">Stand</button></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 text-center yellow mt-sm">
+                <!-- Pot will be added here through JavaScript -->
+                <h4>Pot: <span id="pot"></span>$</h4>
+            </div>
+            <div class="col text-center">
+                <ul id="betting">
+                    <li><button class="btn btn-info" id="bet">Bet</button></li>
+                    <li><button class="btn btn-success" id="five">5$</button></li>
+                    <li><button class="btn btn-warning" id="ten">10$</button></li>
+                    <li><button class="btn btn-info" id="double">Double</button></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<!-- Game JavaScript -->
+<script src="/js/deck.js"></script>
+<script src="/js/interface.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/user.js"></script>
+<script src="/js/game.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

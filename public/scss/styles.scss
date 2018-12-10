@@ -1,0 +1,108 @@
+@import "_reset";
+@import "_variables";
+@import "_mixins";
+@import "_helper";
+
+.header {
+    margin-bottom: 1.5vh;
+    padding: 1vh;
+    background: $bgBlack;
+    border-bottom: 1px solid $fadedBorder;
+    h1 {
+        color: $fontYellow;
+    }
+    h4 {
+        color:$messageGray;
+    }
+}
+
+#loginForm {
+    color: $messageGray;
+    h4#invalid {
+        color: $interfaceRed;
+    }
+}
+
+.navbar {
+    background: $interfaceRed !important;
+    color: $messageGray;
+    #money {
+        font-size: 20px;
+        color: $fontYellow;
+    }
+    .inline-list li {
+        margin-top: 2vh;
+        display: inline-block;
+    }
+}
+
+.container {
+    max-width: 70%;
+    background: $bgBlack;
+    box-shadow: 0 5px 10px $shadowGray;
+    min-height: 71vh;
+    max-width: 70%;
+}
+
+#gameSection {
+    max-width: 70%;
+    box-shadow: 0 5px 10px $shadowGray;
+    h2 {
+        color: $messageGray;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 5vh;
+        @include mQ(667px,375px){
+            font-size: 19px;
+        }
+    }
+    h4 {
+        margin: .5vh 0;
+    }
+    .card, .card-back {
+        min-height: 15vh;
+        max-height: 15vh;
+        margin-right: .5vh;
+        display: inline-block;
+        @include mQ(667px,375px){
+            max-height: 13vh;
+            min-height: 13vh;
+        }
+        
+    }
+    #houseCards, #playerCards {
+        min-height: 15vh;
+    }
+    #houseScore, #playerScore {
+        h4 {
+            display: block;
+            min-height: 5vh;
+            background: $interfaceRed;
+            color: $fontYellow;
+        }
+    }
+}
+
+footer {
+    background: $interfaceRed;
+    color: $fontYellow;
+    max-width: 70%;
+    box-shadow: 0 5px 10px $shadowGray;
+    li {
+        display: inline-block;
+        @include mQ(667px,375px){
+            margin: 0;
+            padding: 0;
+        }
+    }
+    button {
+        width: 70px;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        @include mQ(667px,375px){
+            width: 100%;
+            margin-top: 2vh;
+            margin-bottom: 0;
+        }
+    }
+}

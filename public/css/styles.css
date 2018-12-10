@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Acme");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Acme', Arial, sans-serif;
+  background: #007C4B;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.margin-left {
+  margin-left: 7vh;
+}
+
+.mt-sm {
+  margin-top: 2vh;
+}
+
+.m-bot {
+  margin-bottom: 5vh;
+}
+
+.m-right {
+  margin-right: 1vh;
+}
+
+.padding {
+  padding: .5em;
+}
+
+.header {
+  margin-bottom: 1.5vh;
+  padding: 1vh;
+  background: #1b1b1b;
+  border-bottom: 1px solid rgba(226, 172, 28, 0.4);
+}
+
+.header h1 {
+  color: #E2AC1C;
+}
+
+.header h4 {
+  color: #aaaaaa;
+}
+
+#loginForm {
+  color: #aaaaaa;
+}
+
+#loginForm h4#invalid {
+  color: #8B0000;
+}
+
+.navbar {
+  background: #8B0000 !important;
+  color: #aaaaaa;
+}
+
+.navbar #money {
+  font-size: 20px;
+  color: #E2AC1C;
+}
+
+.navbar .inline-list li {
+  margin-top: 2vh;
+  display: inline-block;
+}
+
+.container {
+  max-width: 70%;
+  background: #1b1b1b;
+  -webkit-box-shadow: 0 5px 10px #333;
+  box-shadow: 0 5px 10px #333;
+  min-height: 71vh;
+  max-width: 70%;
+}
+
+#gameSection {
+  max-width: 70%;
+  -webkit-box-shadow: 0 5px 10px #333;
+  box-shadow: 0 5px 10px #333;
+}
+
+#gameSection h2 {
+  color: #aaaaaa;
+  font-size: 25px;
+  text-align: center;
+  min-height: 8vh;
+  margin-top: 5vh;
+}
+
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+  #gameSection h2 {
+    font-size: 19px;
+  }
+}
+
+#gameSection h4 {
+  padding: 2px;
+  margin: .5vh 0;
+}
+
+#gameSection .card, #gameSection .card-back {
+  max-height: 15vh;
+  margin-right: .5vh;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+  #gameSection .card, #gameSection .card-back {
+    max-height: 13vh;
+  }
+}
+
+#gameSection #houseCards, #gameSection #playerCards {
+  min-height: 10vh;
+  min-width: 10vh;
+  margin-top: 1vh;
+}
+
+#gameSection #houseScore, #gameSection #playerScore {
+  background: #8B0000;
+  color: #E2AC1C;
+}
+
+footer {
+  background: #8B0000;
+  color: #E2AC1C;
+  max-width: 70%;
+  -webkit-box-shadow: 0 5px 10px #333;
+  box-shadow: 0 5px 10px #333;
+}
+
+footer li {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+  footer li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+footer button {
+  width: 70px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+  footer button {
+    width: 100%;
+    margin-top: 2vh;
+    margin-bottom: 0;
+  }
+}

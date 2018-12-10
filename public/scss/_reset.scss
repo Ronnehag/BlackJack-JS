@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+* {
+    margin: 0;
+    padding: 0;   
+}
+body {
+    font-family: 'Acme', Arial, sans-serif;
+    background: #007C4B;
+    height: 100%;
+    width: 100%;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
