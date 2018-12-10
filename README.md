@@ -20,7 +20,7 @@ PLAYER:
 
 COMPUTER:
 - Starts his turn after the player uses 'Stand' or 'Double'.
-- Will show his hidden card If the score is equal or above 17 he is forced to stand. Otherwise he will start to draw cards.
+- Will show his hidden card, if the score is equal or above 17 he is forced to stand. Otherwise he will start to draw cards until he is equal or above 17.
 
 MAIN:
 - Get as close to 21 as possible without going over.
