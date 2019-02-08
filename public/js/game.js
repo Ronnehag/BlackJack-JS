@@ -54,9 +54,9 @@ class BlackJack {
     }
 
     async initDeal(cb) {
-        let time = 0;
+        let count = 0;
         let timer = await setInterval(() => {
-            switch (time) {
+            switch (count) {
                 case 0:
                     gameInterface.printCard($("#playerCards"), this.Player.hand[0]);
                     break;
@@ -70,8 +70,8 @@ class BlackJack {
                     gameInterface.printHidden();
                     break;
             }
-            time++;
-            if (time === 4) {
+            count++;
+            if (count === 4) {
                 clearInterval(timer);
                 cb();
             }
@@ -106,6 +106,7 @@ class BlackJack {
         const potMoney = parseInt($("#pot").text());
         gameInterface.printMsg(`DRAW | Returned ${potMoney}$`);
         gameInterface.updateMoney(parseInt($('#money').text() + potMoney));
+        $("#deal").removeAttr("disabled");
     }
 
     checkWhoWon() {
